@@ -12,19 +12,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/spes/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
-
-# infinity stuffs
-INFINITY_BUILD_TYPE := UNOFFICIAL
-WITH_GAPPS := false
-INFINITY_MAINTAINER := Muralidharan K
+$(call inherit-product, vendor/mist/config/common_full_phone.mk)
 
 # Product Specifics
-PRODUCT_NAME := infinity_spes
+PRODUCT_NAME := mist_spes
 PRODUCT_DEVICE := spes
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 11
 PRODUCT_MANUFACTURER := Xiaomi
+
+# Set maintainer
+MISTOS_MAINTAINER := Sehraan
+
+# Enable GMS with mini package
+WITH_GMS := true
+TARGET_USES_PICO_GAPPS := true
+
+# Enable UI enhancements
+TARGET_ENABLE_BLUR := true
+
+# Enable features
+TARGET_SUPPORTS_QUICK_TAP := true
+BYPASS_CHARGE_SUPPORTED := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
