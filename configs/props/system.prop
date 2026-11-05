@@ -177,3 +177,7 @@ ro.mist.front=13MP
 ro.mist.platform=SM6225
 ro.mist.screen=6.43' FHD+ Amoled
 ro.mist.device.name=Redmi Note 11
+
+# Blur
+ro.launcher.blur.appLaunch=1
+ro.sf.blurs_are_expensive=1

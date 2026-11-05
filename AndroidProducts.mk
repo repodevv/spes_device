@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mistify_spes.mk
+    $(LOCAL_DIR)/lineage_spes.mk
 
 COMMON_LUNCH_CHOICES := \
-    mistify_spes-user \
-    mistify_spes-userdebug \
-    mistify_spes-eng
+    lineage_spes-user \
+    lineage_spes-userdebug \
+    lineage_spes-eng
