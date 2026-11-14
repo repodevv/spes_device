@@ -19,26 +19,20 @@ TARGET_SCREEN_WIDTH := 1080
 #PRODUCT_SOONG_NAMESPACES += \
 #    vendor/pixelos/pixel-clocks/common
 
-# Lunch banner maintainer variable
-RISING_MAINTAINER=Sehraan
+# In your device.mk or BoardConfig.mk
 
-# Chipset/Maintainer properties (ro.rising.chipset/ro.rising.maintainer) 
-# Set RISING_MAINTAINER for version control 
-# (Optional if builder is setting properties via init_<device>.cpp)
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingChipset=Snapdragon 680 \
-    RisingMaintainer=Sehraan
+# Set maintainer
+MISTOS_MAINTAINER := Sehraan
 
-RISING_MAINTAINER := Sehraan
+# Enable GMS with mini package
+WITH_GMS := false
 
-# Disable/enable blur support, false by default
+# Enable UI enhancements
 TARGET_ENABLE_BLUR := true
 
-# Whether to ship aperture camera, false by default
-PRODUCT_NO_CAMERA := false
-
-# VANILLA only build flags
-WITH_GMS := false
+# Enable features
+TARGET_SUPPORTS_QUICK_TAP := true
+BYPASS_CHARGE_SUPPORTED := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
