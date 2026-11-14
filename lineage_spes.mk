@@ -19,23 +19,26 @@ TARGET_SCREEN_WIDTH := 1080
 #PRODUCT_SOONG_NAMESPACES += \
 #    vendor/pixelos/pixel-clocks/common
 
+# Lunch banner maintainer variable
+RISING_MAINTAINER=Sehraan
 
+# Chipset/Maintainer properties (ro.rising.chipset/ro.rising.maintainer) 
+# Set RISING_MAINTAINER for version control 
+# (Optional if builder is setting properties via init_<device>.cpp)
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset=Snapdragon 680 \
+    RisingMaintainer=Sehraan
 
-# Product Specifics
-PRODUCT_NAME := infinity_spes
-PRODUCT_DEVICE := spes
-PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi Note 11
-PRODUCT_MANUFACTURER := Xiaomi
+RISING_MAINTAINER := Sehraan
 
-# Maintainer Name
-INFINITY_MAINTAINER := Sehraan
+# Disable/enable blur support, false by default
+TARGET_ENABLE_BLUR := true
 
-# Whether the device supports Fingerprint On Display
-TARGET_HAS_UDFPS := false
+# Whether to ship aperture camera, false by default
+PRODUCT_NO_CAMERA := false
 
-# Whether Including Google Apps
-WITH_GAPPS := false
+# VANILLA only build flags
+WITH_GMS := false
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
